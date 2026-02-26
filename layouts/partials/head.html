@@ -58,6 +58,20 @@
       {{ end }}
     {{ end }}
 
+    <style>
+      /* Safety fallback: ensure sidebar remains readable across theme/Hugo changes */
+      #sidebar { background: #1f1f23 !important; }
+      #sidebar .sidebar-profile,
+      #sidebar .sidebar-profile .sidebar-profile-name,
+      #sidebar .sidebar-profile .sidebar-profile-bio,
+      #sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link,
+      #sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link .sidebar-button-desc,
+      #sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link .sidebar-button-icon {
+        color: #f2f2f2 !important;
+        opacity: 1 !important;
+      }
+    </style>
+
     {{ if .Site.Params.ga4ID }}
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.ga4ID }}"></script>
